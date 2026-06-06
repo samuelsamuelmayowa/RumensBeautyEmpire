@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Inter", sans-serif;
+    /* border: 1px solid; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+.cursive {
+    font-family: "Island Moments", cursive;
+}
+
+/* INDIVIDUAL TEXT ANIMATION */
+.word {
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out, color 0.2s ease;
+}
+
+.word.hovered {
+    transform: scale(1.2);
+    color: #B68302;
+}
+
+.word.adjacent {
+    color: #b6830280;
+}
+
+/* landing carousel */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom-animation {
+    animation: zoom 20s infinite;
+}
+
+.home {
+    position: relative;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    bottom: 0;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width:768px) {
+    .home::after {
+        inset: 0;
+        border-radius: 0;
+    }
+}
+
+.testimonial {
+    background-image: url("./assets//images/home-bg01.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* background-attachment: fixed; */
+}
+
+.testimonial::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #dbd2c7c2;
+}
+
+.testimonial li button.splide__pagination__page {
+    opacity: 1 !important;
+    border-radius: 0;
+    border-radius: 4px;
+    width: 8px;
+}
+
+.testimonial li button.splide__pagination__page.is-active {
+    opacity: 1 !important;
+    width: 15px !important;
+    background-color: #B68302;
+}
+
+/* FOOTER ANIMATION */
+@media only screen and (min-width:990px) {
+    .footer-icons div {
+        animation-name: thebounce;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+    }
+}
+
+
+.footer-icons div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.footer-icons div:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.footer-icons div:nth-child(3) {
+    animation-delay: 2s;
+}
+
+
+@keyframes thebounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* LOADER CSS */
+/* From Uiverse.io by SelfMadeSystem */
+/* .absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.loader {
+    display: flex;
+    margin: 0.25em 0;
+}
+
+.w-2 {
+    width: 0.5em;
+}
+
+.dash {
+    animation: dashArray 2s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+}
+
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+        spin 8s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+} */
+/* From Uiverse.io by Shoh2008 */
+.loader {
+    display: block;
+    width: 84px;
+    height: 84px;
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #000;
+    transform: translate(-50%, -100%) scale(0);
+    animation: push_401 2s infinite linear;
+}
+
+.loader:after {
+    animation-delay: 1s;
+}
+
+@keyframes push_401 {
+
+    0%,
+    50% {
+        transform: translate(-50%, 0%) scale(1)
+    }
+
+    100% {
+        transform: translate(-50%, -100%) scale(0)
+    }
+}
