@@ -4,24 +4,20 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        poppins: ['Poppins'],
-        cormorant: ["Cormorant", "serif"],
-        quicksand: ["Quicksand", "sans-serif"],
-        open_sans: ["Open Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
-      },
-      colors: {
-        text: "#B68302",
-        button: "#B68302",
-        text_gold: "#CD9933",
-        dark: "#151515",
-        dark2: "#212121",
-      },
+theme: {
+  extend: {
+    colors: {
+      dark: "#050505",
+      dark2: "#0d0a07",
+      gold: "#d4af37",
+      cream: "#fff7ea",
+      brown: "#6b3f24",
+    },
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
     },
   },
+},
   plugins: [],
 
 }
