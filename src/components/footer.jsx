@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="overflow-hidden py-10 px-4 lg:px-20 bg-[url('./assets/images/servicebg.png')] bg-cover bg-fixed bg-no-repeat relative after:absolute after:inset-0 after:bg-black/80">
-                <motion.p variants={fadeIn("left", 0.5, 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: true }} className="relative z-10 text-white text-right font-open_sans">COPYRIGHT {new Date().getFullYear()} © BAMVISUALS </motion.p>
+                <motion.p variants={fadeIn("left", 0.5, 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: true }} className="relative z-10 text-white text-right font-open_sans">COPYRIGHT {new Date().getFullYear()} © Rumen Signature Beauty Empire </motion.p>
             </div>
         </>
     )

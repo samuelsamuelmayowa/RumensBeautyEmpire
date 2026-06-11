@@ -10,6 +10,7 @@ import About from "./pages/about";
 const LayOut = lazy(()=> import("./layout/stableLayout"))
 import ProjectDetail from "./pages/projectDetail";
 import Loader from "./components/loader"
+import Services from "./components/Services";
 
 
 
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
         {
             path:"contact",
             element:<Contact/>
+        }, 
+
+          {
+            path:"services",
+            element:<Services/>
         }
        ]
     },
