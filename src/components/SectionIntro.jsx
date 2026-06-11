@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import img1 from "../assets/images/Snapinsta.webp";
-import img2 from "../assets/images/show.webp";
+import img1 from "../assets/images/main/WhatsApp Image 2026-06-09 at 7.12.27 PM (3).jpeg";
+import img2 from "../assets/images/main/wigone.jpeg";
 
 const SectionIntro = () => {
   return (

@@ -9,12 +9,12 @@ import Blog from "../components/blog";
 const Home = () => {
     let loced;
     return (
-        <>
+    <>
             <SectionIntro />
             <Films />
             <Services/>
-            <StatsAndStory/>
-            <Testimonial />
+            {/* <StatsAndStory/> */}
+            {/* <Testimonial /> */}
             {/* <Contact /> */}
         {/* <Blog /> */}
         </>

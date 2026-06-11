@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import hair1 from "../assets/images/Snapinsta.webp";
-import hair2 from "../assets/images/show.webp";
-import hair3 from "../assets/images/test.webp";
+import hair1 from "../assets/images/main/WhatsApp Image 2026-06-09 at 7.12.24 PM (5).jpeg";
+import hair2 from "../assets/images/main/WhatsApp Image 2026-06-09 at 7.12.23 PM (2).jpeg";
+import hair3 from "../assets/images/main/WhatsApp Image 2026-06-09 at 7.12.20 PM (3).jpeg";
 
 const Portfolio = () => {
   const styles = [
